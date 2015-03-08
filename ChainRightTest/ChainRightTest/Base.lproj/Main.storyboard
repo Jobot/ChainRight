@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ChainRightTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Add username/password pair to the keychain" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtZ-Tj-NBa">
+                                <rect key="frame" x="16" y="36" width="568" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-P7-dhJ">
+                                <rect key="frame" x="16" y="68" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kzr-tM-yba"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLw-xT-El2">
+                                <rect key="frame" x="16" y="106" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-b6-20S">
+                                <rect key="frame" x="16" y="144" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dva-PH-g5T"/>
+                                </constraints>
+                                <state key="normal" title="Add User">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressAddUserButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lsW-zM-5qy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="top" secondItem="rtZ-Tj-NBa" secondAttribute="bottom" constant="8" id="5tj-RQ-Jvn"/>
+                            <constraint firstItem="kLw-xT-El2" firstAttribute="top" secondItem="qWz-P7-dhJ" secondAttribute="bottom" constant="8" id="Gbi-2f-0UW"/>
+                            <constraint firstItem="rtZ-Tj-NBa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="16" id="Sgl-Ge-KLX"/>
+                            <constraint firstItem="IG2-b6-20S" firstAttribute="leading" secondItem="qWz-P7-dhJ" secondAttribute="leading" id="X4i-E5-lTe"/>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ciG-fq-sEu"/>
+                            <constraint firstItem="IG2-b6-20S" firstAttribute="trailing" secondItem="qWz-P7-dhJ" secondAttribute="trailing" id="dPl-8K-Ofx"/>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="leading" secondItem="kLw-xT-El2" secondAttribute="leading" id="eo6-3B-BC5"/>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="trailing" secondItem="kLw-xT-El2" secondAttribute="trailing" id="igu-Xv-z2v"/>
+                            <constraint firstItem="rtZ-Tj-NBa" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="nkD-GK-54F"/>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="p3U-gN-ucZ"/>
+                            <constraint firstItem="IG2-b6-20S" firstAttribute="top" secondItem="kLw-xT-El2" secondAttribute="bottom" constant="8" id="rB9-ms-dvo"/>
+                            <constraint firstItem="qWz-P7-dhJ" firstAttribute="height" secondItem="kLw-xT-El2" secondAttribute="height" id="rJk-d1-AQv"/>
+                            <constraint firstItem="rtZ-Tj-NBa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="wO5-I2-AEo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="kLw-xT-El2" id="MeU-fc-EUK"/>
+                        <outlet property="usernameField" destination="qWz-P7-dhJ" id="Soj-xk-SY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
